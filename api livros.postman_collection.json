@@ -1,0 +1,254 @@
+{
+	"info": {
+		"_postman_id": "eb94531f-3e20-4bbc-8cc1-96c29fd7089d",
+		"name": "api livros",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "apilivros",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"autor\":\"biuzinho\",\r\n    \"titulo\":\"PBCD\",\r\n    \"edicao\":3,\r\n    \"ano\":2022,\r\n    \"isbn13\":\"978-0135781861\",\r\n    \"editora\":\"Pearson\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/apilivros/livros",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"apilivros",
+						"livros"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "apilivros",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/apilivros/livros/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"apilivros",
+						"livros",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "apilivros/paginacao",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/apilivros/livros/paginacao/?paginacao=true&tamanho=1&paginas=1&direcao=false",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"apilivros",
+						"livros",
+						"paginacao",
+						""
+					],
+					"query": [
+						{
+							"key": "paginacao",
+							"value": "true"
+						},
+						{
+							"key": "tamanho",
+							"value": "1"
+						},
+						{
+							"key": "paginas",
+							"value": "1"
+						},
+						{
+							"key": "direcao",
+							"value": "false"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "apilivros/UUID/{id}",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/apilivros/livros/UUID/eb00ebdc-1b42-459b-b6ea-55e3906c5556",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"apilivros",
+						"livros",
+						"UUID",
+						"eb00ebdc-1b42-459b-b6ea-55e3906c5556"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "apilivros/UUID/{id}",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"autor\":\"autor de teste\",\r\n    \"titulo\":\"titulo de teste\",\r\n    \"edicao\":1,\r\n    \"ano\":2022,\r\n    \"isbn13\":\"978-0135781875\",\r\n    \"editora\":\"Pearson\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/apilivros/livros/UUID/eb00ebdc-1b42-459b-b6ea-55e3906c5556",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"apilivros",
+						"livros",
+						"UUID",
+						"eb00ebdc-1b42-459b-b6ea-55e3906c5556"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "apilivros/UUID/{id}",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/apilivros/livros/UUID/2a3973b1-be79-4ea0-90f5-ffde866cc1de",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"apilivros",
+						"livros",
+						"UUID",
+						"2a3973b1-be79-4ea0-90f5-ffde866cc1de"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "apilivros/isbn13/{isbn13}",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/apilivros/livros/isbn13/0",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"apilivros",
+						"livros",
+						"isbn13",
+						"0"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "apilivros/autor/{autor}",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/apilivros/livros/autor?autor=Robert C. Martin",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"apilivros",
+						"livros",
+						"autor"
+					],
+					"query": [
+						{
+							"key": "autor",
+							"value": "Robert C. Martin"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "apilivros/autoredata/?autor={autor}&ano={ano}",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/apilivros/livros/autoreano?autor=Robert C. Martin&ano=2021",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"apilivros",
+						"livros",
+						"autoreano"
+					],
+					"query": [
+						{
+							"key": "autor",
+							"value": "Robert C. Martin"
+						},
+						{
+							"key": "ano",
+							"value": "2021"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
